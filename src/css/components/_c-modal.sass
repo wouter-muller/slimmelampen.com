@@ -1,0 +1,50 @@
+.c-modal
+  +size(100%)
+  +z-index(modal)
+  background-color: rgba($main-bg-color, 0.95)
+  left: 0
+  position: fixed
+  top: 0
+  visibility: hidden
+
+  &.\--open
+    +fade-in
+
+  &.\--closed
+    +fade-out
+
+  &__inner
+    +box-shadow
+    +center
+    padding: $site__default-spacing * 2
+    background: $main-bg-color
+    max-height: 70%
+    overflow-y: auto
+    max-width: px(800)
+    width: 90%
+
+  &__close
+    +size(px(42))
+    position: absolute
+    top: px(10)
+    right: px(10)
+
+    // Drawing the X
+    &::before,
+    &::after
+      background-color: $main-text-color
+      border-radius: 2px
+      content: ""
+      height: 2px
+      left: 0
+      position: absolute
+      right: 0
+      top: 50%
+      transform-origin: center center
+
+    &::before
+      transform: rotate(45deg) scale(0.5)
+
+    &::after
+      transform: rotate(-45deg) scale(0.5)
+

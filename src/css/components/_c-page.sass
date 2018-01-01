@@ -1,0 +1,29 @@
+.c-page
+  &__header-filler
+    height: $site__header-height
+    margin-bottom: ($site__default-spacing * 3)
+
+  &__section
+    padding: $site__section-padding 0
+
+    &:nth-child(odd)
+      background-color: $grey-mid
+
+    &:nth-child(even)
+      background-color: $grey-light
+
+  // Main and sidebar reusable grid
+  +media-query(ml)
+    &__main-and-side
+      display: grid
+      grid-template-columns: repeat(12, [col-start] 1fr)
+      grid-gap: ($site__default-spacing * 4)
+
+    &__main
+      grid-column: col-start / span 8
+
+    &__side
+      grid-column: col-start 9 / span 4
+      +box-shadow
+      background-color: $main-bg-color
+      padding: $site__default-spacing

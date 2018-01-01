@@ -1,0 +1,127 @@
+// ----------------------------------------------------------------------------
+// Utility helpers for padding
+//
+// Examples:
+// <div class="u-pb"></div>   <-- standard padding-bottom
+// <div class="u-pr"></div>   <-- standard padding-right
+// <div class="u-ph"></div>   <-- standard horizontal padding (left and right)
+// <div class="u-pv"></div>   <-- standard vertical padding (top and bottom)
+//
+// <div class="u-pb--"></div> <-- very small padding bottom
+// <div class="u-pb-"></div>  <-- small padding bottom
+//
+// <div class="u-pb+"></div>  <-- large padding bottom
+// <div class="u-pb++"></div> <-- very large padding bottom
+//
+// Mobile
+//
+// If you only want to target small screens (so basically mobile devices),
+// add @s at the end of the class
+//
+// Examples:
+// <div class="u-pb@s"></div>
+// <div class="u-pb++@s"></div>
+// ----------------------------------------------------------------------------
+
+.u-p
+  $directions-array: "", t, l, b, r
+
+  $directions-map: ("t": "-top", "l": "-left", "b": "-bottom", "r": "-right")
+
+  @each $direction in $directions-array
+
+    &#{$direction}--
+      padding#{map-get($directions-map, $direction)}: $site__default-spacing / 4
+
+    &#{$direction}-
+      padding#{map-get($directions-map, $direction)}: $site__default-spacing / 2
+
+    &#{$direction}
+      padding#{map-get($directions-map, $direction)}: $site__default-spacing
+
+    &#{$direction}\+
+      padding#{map-get($directions-map, $direction)}: $site__default-spacing * 2
+
+    &#{$direction}\+\+
+      padding#{map-get($directions-map, $direction)}: $site__default-spacing * 4
+
+    +media-query(s)
+      &#{$direction}--\@s
+        padding#{map-get($directions-map, $direction)}: $site__default-spacing / 4
+
+      &#{$direction}-\@s
+        padding#{map-get($directions-map, $direction)}: $site__default-spacing / 2
+
+      &#{$direction}\@s
+        padding#{map-get($directions-map, $direction)}: $site__default-spacing
+
+      &#{$direction}\+\@s
+        padding#{map-get($directions-map, $direction)}: $site__default-spacing * 2
+
+      &#{$direction}\+\+\@s
+        padding#{map-get($directions-map, $direction)}: $site__default-spacing * 4
+
+  // Horizontal padding
+  &h--
+    +padding-left-right($site__default-spacing / 4)
+
+  &h-
+    +padding-left-right($site__default-spacing / 2)
+
+  &h
+    +padding-left-right($site__default-spacing)
+
+  &h\+
+    +padding-left-right($site__default-spacing * 2)
+
+  &h\+\+
+    +padding-left-right($site__default-spacing * 4)
+
+
+  +media-query(s)
+    &h--\@s
+      +padding-left-right($site__default-spacing / 4)
+
+    &h-\@s
+      +padding-left-right($site__default-spacing / 2)
+
+    &h\@s
+      +padding-left-right($site__default-spacing)
+
+    &h\+\@s
+      +padding-left-right($site__default-spacing * 2)
+
+    &h\+\+\@s
+      +padding-left-right($site__default-spacing * 4)
+
+  // Vertical padding
+  &v--
+    +padding-top-bottom($site__default-spacing / 4)
+
+  &v-
+    +padding-top-bottom($site__default-spacing / 2)
+
+  &v
+    +padding-top-bottom($site__default-spacing)
+
+  &v\+
+    +padding-top-bottom($site__default-spacing * 2)
+
+  &v\+\+
+    +padding-top-bottom($site__default-spacing * 4)
+
+  +media-query(s)
+    &v--\@s
+      +padding-top-bottom($site__default-spacing / 4)
+
+    &v-\@s
+      +padding-top-bottom($site__default-spacing / 2)
+
+    &v\@s
+      +padding-top-bottom($site__default-spacing)
+
+    &v\+\@s
+      +padding-top-bottom($site__default-spacing * 2)
+
+    &v\+\+\@s
+      +padding-top-bottom($site__default-spacing * 4)

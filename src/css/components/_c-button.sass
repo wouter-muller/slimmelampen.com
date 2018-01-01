@@ -1,0 +1,28 @@
+.c-button
+  +font-size(s, $input__line-height)
+  +font-weight--semi-bold
+  +padding-left-right(px($input__padding-left-right))
+  +padding-top-bottom($input__padding-top-bottom)
+  border-radius: px(8)
+  border: 0
+  color: $inverted-text-color
+  cursor: pointer
+  display: inline-block
+  outline: none
+  position: relative
+  text-align: center
+
+  &.\--main-cta
+    background-color: $main-cta-color
+
+  &.\--secondary-cta
+    background-color: $blue // TO-DO: use semantic variable instead
+
+  &.\--disabled
+    background-color: $grey-light // TO-DO: use semantic variable instead
+    cursor: default
+
+  &.\--border
+    border-width: px(1)
+    border-style: solid
+    color: inherit

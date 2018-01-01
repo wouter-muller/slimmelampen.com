@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="c-page__header-filler"></div>
+
+    <div class="l-wrapper">
+      <div class="c-page__main-and-side">
+        <main class="c-page__main">
+          <div class="c-blog-post">
+            <div class="c-blog-post__title">
+              <h1 class="c-heading --xl u-mb">{{ page.title }}</h1>
+            </div>
+
+            <div class="c-blog-post__image u-mb">
+              <img src="/assets/images/{{ page.image }}">
+            </div>
+
+            <div class="c-blog-post__content u-mb">
+              {{ content }}
+            </div>
+          </div>
+        </main>
+        <aside class="c-page__side">
+          <div>Blah</div>
+        </aside>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    {% include end-of-body.html %}
+  </body>
+
+</html>

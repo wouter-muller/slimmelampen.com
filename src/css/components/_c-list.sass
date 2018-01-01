@@ -1,0 +1,57 @@
+.c-list
+
+  // List component for a very basic list
+  &.\--basic
+    margin-left: px(30)
+
+  // -------------------------------------------------------------------------
+  // List component for a pros and cons list that get prepended with a + or -
+  //
+  // Markup example of a list with pros:
+  // <ul class="c-list pros">
+  //    <li>...</li>
+  //    <li>...</li>
+  // </ul>
+  //
+  // Markup example of a list with cons:
+  // <ul class="c-list cons">
+  //    <li>...</li>
+  //    <li>...</li>
+  // </ul>
+  // -------------------------------------------------------------------------
+
+  @mixin c-list-pros-cons-shared-styles
+    $height: px(18)
+
+    padding-left: px(30)
+    list-style: none
+    position: relative
+    line-height: $height
+    margin-bottom: px(5)
+
+    &:before
+      +size($height)
+      border-radius: 100%
+      color: $inverted-text-color
+      left: 0
+      position: absolute
+      text-align: center
+      top: 0
+
+  &.\--cons
+    li
+      +c-list-pros-cons-shared-styles
+
+      &:before
+        +font-size(xl, 12)
+        background-color: $red
+        content: "-"
+
+  &.\--pros
+    li
+      +c-list-pros-cons-shared-styles
+
+      &:before
+        +font-size(l, none)
+        background-color: $green
+        content: "+"

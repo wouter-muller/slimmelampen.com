@@ -1,0 +1,16 @@
+@mixin font-size($font-size, $spacing: "normal")
+
+  $size: map-get($font-sizes, $font-size) // get the t-shirt size array
+  $font-size: map-get($size, font-size) // get the respective font-size
+  $line-height: map-get($size, line-height) // get the respective line-height
+
+  font-size: px($font-size)
+
+  @if ($spacing == "normal")
+    line-height: ($line-height / $font-size)
+  @else if ($spacing == "none")
+    // set no line-height
+  @else
+    line-height: ($spacing / $font-size)
+
+

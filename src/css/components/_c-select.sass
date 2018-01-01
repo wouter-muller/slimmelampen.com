@@ -1,0 +1,25 @@
+.c-select
+  position: relative
+
+  select
+    +font-size($input__font-size)
+    +padding-left-right(px($input__padding-left-right))
+    +padding-top-bottom($input__padding-top-bottom)
+    appearance: none
+    -webkit-appearance: none // TO-DO: Use Autoprefixer for this
+    background-color: $main-bg-color
+    border-radius: px($input__border-radius)
+    border: px(1) solid $main-border-color
+    color: inherit // otherwise you always get black which may not be your main text color
+    outline: 0
+    width: 100%
+
+  label
+    +bg-image("icons/select.svg")
+    +center-vertical
+    background-position: right px($input__padding-left-right) center
+    display: inline-block
+    height: $input__height
+    pointer-events: none
+    width: 100%
+    left: 0

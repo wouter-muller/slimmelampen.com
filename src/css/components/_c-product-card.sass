@@ -1,0 +1,35 @@
+.c-product-card
+  background-color: $main-bg-color
+  +box-shadow-border-radius
+  display: block // cause we use an <a> tag
+  padding: $site__default-spacing
+  text-align: center
+
+  &__image
+    position: relative
+    padding-top: 100%
+    overflow: hidden
+    height: 0
+    margin-bottom: px(32)
+
+    img
+      max-width: 100%
+      max-height: 100%
+      +center
+
+  &__title
+    font-size: px(20)
+    margin-bottom: px(20)
+
+  &__price
+    font-weight: 700
+
+    &--old
+      span
+        text-decoration: line-through
+        color: #666
+
+    &--new
+      span
+        color: $main-brand-color
+        font-size: px(24)

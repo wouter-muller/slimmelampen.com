@@ -1,0 +1,7 @@
+.u-font-size
+
+  $font-sizes-array: xs, s, m, l, xl, xxl
+
+  @each $size in $font-sizes-array
+    &--#{$size}
+      +font-size(#{$size})

@@ -1,0 +1,59 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl }}/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl }}/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl }}/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="{{ site.baseurl }}/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ site.baseurl }}/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/favicon-16x16.png">
+  <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="google-site-verification" content="jjYWS0oPlO6fqOkMUHNXjQK5dvB30x8DJLmXE_VpF3k" />
+  <meta name="B-verify" content="bde4a825d26c6d0247cf766df69026e14675eff4" />
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{% if page.title_tag %}{{ page.title_tag }}{% else if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="{{ page.summary }}">
+  {% if page.image %}
+    <meta property="og:image" content="{{ site.url }}/assets/images/{{ page.image }}.jpg">
+  {% else if page.thumbnail %}
+    <meta property="og:image" content="{{ site.url }}/assets/images/meerstad-in-beeld/albums/{{ page.url-slug }}{{ page.thumbnail }}.jpg">
+  {% endif %}
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.title_tag %}{{ page.title_tag }}{% else if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{{ page.summary }}">
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+
+  {% if page.image %}
+    <meta name="twitter:image" content="{{ site.url }}/assets/images/{{ page.image }}.jpg">
+  {% else if page.thumbnail %}
+    <meta name="twitter:image" content="{{ site.url }}/assets/images/meerstad-in-beeld/albums/{{ page.url-slug }}{{ page.thumbnail }}.jpg">
+  {% endif %}
+
+</head>
+
+

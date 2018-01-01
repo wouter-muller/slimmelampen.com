@@ -1,0 +1,34 @@
+.c-checkbox
+  $size: 20
+
+  display: inline-block
+
+  label
+    +font-size(s, $size)
+    cursor: pointer // to show the user they can click the label and the checkbox will be clicked
+    display: inline-block
+    padding-left: px($size + 10) // for a scalable distance between checkbox and label
+    position: relative // for absolutely-positioned pseudo element
+    user-select: none // prevent label from being selected
+
+    &:before
+      +size(px($size))
+      border: px(1) solid $main-border-color
+      content: ""
+      left: 0
+      line-height: px($size)
+      position: absolute
+      text-align: center
+      top: 0
+
+  input
+    display: none
+
+    &:checked
+      ~ label
+        &:before
+          +bg-image("icons/checkmark.svg")
+          background-position: center center
+          background-size: 90%
+
+

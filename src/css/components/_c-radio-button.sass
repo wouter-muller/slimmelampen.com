@@ -1,0 +1,35 @@
+.c-radio-button
+  $size: 20
+
+  margin-bottom: $site__default-spacing / 2
+
+  label
+    +font-size($input__font-size, 20)
+    cursor: pointer
+    display: inline-block
+    padding-left: px(30)
+    user-select: none
+    position: relative
+
+    &:before
+      +size(px($size))
+      background-color: $main-bg-color
+      border-radius: 100%
+      border: px(1) solid $main-border-color
+      content: ""
+      display: inline-block
+      left: 0
+      position: absolute
+
+  input
+    display: none // hide the native radio button
+
+    &:checked
+      ~ label
+        &:after
+          +center-vertical
+          +size(px($size - 8))
+          background-color: $blue // TO-DO: use semantic variable instead
+          border-radius: 100%
+          content: ""
+          left: px(4)

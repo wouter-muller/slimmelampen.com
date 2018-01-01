@@ -1,0 +1,46 @@
+.c-hero
+  position: relative
+
+  &__image
+    position: relative
+    background-size: cover
+    height: 100%
+    background-position: center center
+
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba($inverted-bg-color, 0.4)
+
+  &__heading
+    +center
+    text-align: center
+    letter-spacing: px(1.6)
+    color: $inverted-text-color
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5)
+    width: 100%
+    padding: 0 $site__default-spacing
+
+    +media-query(ml)
+      font-size: px(70)
+      max-width: px(1100)
+
+  // HOME PAGE BOVENAAN
+  &.\--home1
+    height: px(700)
+
+    .c-hero
+      &__image
+        +bg-image("backgrounds/hero-home3.jpg")
+
+  // HOME PAGE MIDDEN
+  &.\--home2
+    height: px(450)
+
+    .c-hero
+      &__image
+        +bg-image("backgrounds/hero-home4.jpg")

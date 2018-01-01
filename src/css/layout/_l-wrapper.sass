@@ -1,0 +1,17 @@
+@mixin shared-wrapper-styles
+  margin-left: auto
+  margin-right: auto
+  padding-left: $site__default-spacing
+  padding-right: $site__default-spacing
+
+.l-wrapper
+  +shared-wrapper-styles
+  max-width: $site__max-width
+
+  &--small
+    +shared-wrapper-styles
+    max-width: px(740)
+
+  &--medium
+    +shared-wrapper-styles
+    max-width: px(990)

@@ -1,0 +1,63 @@
+.c-tooltip
+  filter: drop-shadow(rgba($black, 0.2) 0 px(5) px(25))
+  -webkit-transform: translateZ(0)
+  +center-vertical
+  +font-size(xs)
+  +z-index(tooltip)
+  background-color: $main-bg-color
+  display: none
+  left: 100%
+  padding: 5px 10px
+  position: absolute
+  width: px(300)
+  margin-left: px(10)
+
+  // Arrow
+  &:after
+    border: 10px solid
+    border-color: transparent white transparent transparent
+    content: ""
+    position: absolute
+    right: 100%
+    +center-vertical
+
+  &.\--left
+    left: auto
+    right: 100%
+    margin-right: px(10)
+
+  // Arrow
+  &.\--left:after
+    left: 100%
+    right: auto
+    border-color: transparent transparent transparent white
+
+  // The wrapper contains and makes room for the tooltip icon
+  &__wrapper
+    position: relative
+    display: inline-block
+    cursor: pointer
+    padding-right: px(25)
+
+    &.\--left
+      padding-left: px(25)
+
+    // The tooltip icon itself
+    &:after
+      +bg-image("icons/info.svg") // TO-DO replace with actual image
+      +center-vertical
+      +size(px(18)) // TO-DO replace with actual image dimensions
+      content: ""
+      display: inline-block
+      right: 0
+      background-position: center center
+      background-size: 100%
+
+    &.\--left:after
+      right: auto
+      left: 0
+
+// Making the tooltip visible on hover
+.c-tooltip__wrapper:hover .c-tooltip
+  +media-query(ml)
+    display: inline-block

@@ -1,0 +1,127 @@
+// ----------------------------------------------------------------------------
+// Utility helpers for margins
+//
+// Examples:
+// <div class="u-mb"></div>   <-- standard margin-bottom
+// <div class="u-mr"></div>   <-- standard margin-right
+// <div class="u-mh"></div>   <-- standard horizontal margin (left and right)
+// <div class="u-mv"></div>   <-- standard vertical margin (top and bottom)
+//
+// <div class="u-mb--"></div> <-- very small margin bottom
+// <div class="u-mb-"></div>  <-- small margin bottom
+//
+// <div class="u-mb+"></div>  <-- large margin bottom
+// <div class="u-mb++"></div> <-- very large margin bottom
+//
+// Mobile
+//
+// If you only want to target small screens (so basically mobile devices),
+// add @s at the end of the class
+//
+// Examples:
+// <div class="u-mb@s"></div>
+// <div class="u-mb++@s"></div>
+// ----------------------------------------------------------------------------
+
+.u-m
+  $directions-array: "", t, l, b, r
+
+  $directions-map: ("t": "-top", "l": "-left", "b": "-bottom", "r": "-right")
+
+  @each $direction in $directions-array
+
+    &#{$direction}--
+      margin#{map-get($directions-map, $direction)}: $site__default-spacing / 4
+
+    &#{$direction}-
+      margin#{map-get($directions-map, $direction)}: $site__default-spacing / 2
+
+    &#{$direction}
+      margin#{map-get($directions-map, $direction)}: $site__default-spacing
+
+    &#{$direction}\+
+      margin#{map-get($directions-map, $direction)}: $site__default-spacing * 2
+
+    &#{$direction}\+\+
+      margin#{map-get($directions-map, $direction)}: $site__default-spacing * 4
+
+    +media-query(s)
+      &#{$direction}--\@s
+        margin#{map-get($directions-map, $direction)}: $site__default-spacing / 4
+
+      &#{$direction}-\@s
+        margin#{map-get($directions-map, $direction)}: $site__default-spacing / 2
+
+      &#{$direction}\@s
+        margin#{map-get($directions-map, $direction)}: $site__default-spacing
+
+      &#{$direction}\+\@s
+        margin#{map-get($directions-map, $direction)}: $site__default-spacing * 2
+
+      &#{$direction}\+\+\@s
+        margin#{map-get($directions-map, $direction)}: $site__default-spacing * 4
+
+  // Horizontal margin
+  &h--
+    +margin-left-right($site__default-spacing / 4)
+
+  &h-
+    +margin-left-right($site__default-spacing / 2)
+
+  &h
+    +margin-left-right($site__default-spacing)
+
+  &h\+
+    +margin-left-right($site__default-spacing * 2)
+
+  &h\+\+
+    +margin-left-right($site__default-spacing * 4)
+
+
+  +media-query(s)
+    &h--\@s
+      +margin-left-right($site__default-spacing / 4)
+
+    &h-\@s
+      +margin-left-right($site__default-spacing / 2)
+
+    &h\@s
+      +margin-left-right($site__default-spacing)
+
+    &h\+\@s
+      +margin-left-right($site__default-spacing * 2)
+
+    &h\+\+\@s
+      +margin-left-right($site__default-spacing * 4)
+
+  // Vertical margin
+  &v--
+    +margin-top-bottom($site__default-spacing / 4)
+
+  &v-
+    +margin-top-bottom($site__default-spacing / 2)
+
+  &v
+    +margin-top-bottom($site__default-spacing)
+
+  &v\+
+    +margin-top-bottom($site__default-spacing * 2)
+
+  &v\+\+
+    +margin-top-bottom($site__default-spacing * 4)
+
+  +media-query(s)
+    &v--\@s
+      +margin-top-bottom($site__default-spacing / 4)
+
+    &v-\@s
+      +margin-top-bottom($site__default-spacing / 2)
+
+    &v\@s
+      +margin-top-bottom($site__default-spacing)
+
+    &v\+\@s
+      +margin-top-bottom($site__default-spacing * 2)
+
+    &v\+\+\@s
+      +margin-top-bottom($site__default-spacing * 4)

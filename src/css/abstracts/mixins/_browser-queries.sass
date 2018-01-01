@@ -1,0 +1,16 @@
+// ----------------------------------------------------------------------------
+// This mixin lets you target Internet Explorer 10 and 11
+//
+// Example:
+//
+// .selector
+//   ... (normal styles here)
+//
+//   @include ie
+//     ... (styles for IE10+ here)
+//
+// ----------------------------------------------------------------------------
+
+@mixin ie
+  @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none)
+    @content
