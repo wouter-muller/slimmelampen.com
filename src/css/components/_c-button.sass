@@ -1,18 +1,19 @@
 .c-button
   +font-size(s, $input__line-height)
   +font-weight--semi-bold
-  +padding-left-right(px($input__padding-left-right))
+  +padding-left-right(px($input__padding-left-right * 2))
   +padding-top-bottom($input__padding-top-bottom)
-  border-radius: px(8)
+  +border-radius
   border: 0
   color: $inverted-text-color
   cursor: pointer
   display: inline-block
+  text-transform: uppercase
   outline: none
   position: relative
   text-align: center
 
-  &.\--main-cta
+  &.\--cta
     background-color: $main-cta-color
 
   &.\--secondary-cta

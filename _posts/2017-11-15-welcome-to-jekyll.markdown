@@ -2,10 +2,15 @@
 layout: blog
 title:  Een introductie tot de slimme lampen van Philips Hue
 image: blog-posts/post1.jpg
+permalink: 2018/01/01/een-introductie-tot-de-slimme-lampen-van-philips-hue
 ---
 ## Wat is slimme verlichting?
 
-Slimme lampen zien er net zo uit als normale gloeilampen, en je stopt ze ook gewoon in je bestaande lampen. Het grootste verschil is dat een slimme lamp een draadloze verbinding heeft met je netwerk thuis waardoor er een wereld aan nieuwe mogelijkheden voor je open gaat. Een ouderwetse lamp kun je vaak alleen aan of uit doen, maar slimme lampen zijn dimbaar (je kunt ze harder of zachter zetten), en de wat duurdere modellen hebben alle mogelijke kleuren die je maar bedenken kunt. Verder kun je je lampen aan en uitdoen met bijv. je telefoon of tablet. Maar je kunt ook bepaalde acties automatiseren. Bijvoorbeeld dat al je lampen automatisch uit gaan als je het huis verlaat. Of dat je lampen bij zonsondergang automatisch aangaan, maar dan alleen als je ook daadwerkelijk thuis bent. Door dit soort dingen staan je lampen minder vaak onnodig te branden (je kunt ze zelfs op afstand uitzetten), en kun je op lange termijn energie besparen, zeker omdat slimme lampen over het algemeen al erg weinig energie verbruiken. Bovendien gaan slimme lampen heel erg lang mee (bij normaal gebruik meer dan 10 jaar), waardoor je minder vaak nieuwe lampen hoeft te kopen.
+Slimme lampen zien er net zo uit als normale gloeilampen, en je stopt ze ook gewoon in je bestaande lampen. Het grootste verschil is dat een slimme lamp een draadloze verbinding heeft met je netwerk thuis waardoor er een wereld aan nieuwe mogelijkheden voor je open gaat. Een ouderwetse lamp kun je vaak alleen aan of uit doen, maar slimme lampen zijn dimbaar (je kunt ze harder of zachter zetten), en de wat duurdere modellen hebben alle mogelijke kleuren die je maar bedenken kunt. Verder kun je je lampen aan en uitdoen met bijv. je telefoon of tablet.
+
+Maar je kunt ook bepaalde acties automatiseren. Bijvoorbeeld dat al je lampen automatisch uit gaan als je het huis verlaat. Of dat je lampen bij zonsondergang automatisch aangaan, maar dan alleen als je ook daadwerkelijk thuis bent.
+
+Door dit soort dingen staan je lampen minder vaak onnodig te branden (je kunt ze zelfs op afstand uitzetten), en kun je op lange termijn energie besparen, zeker omdat slimme lampen over het algemeen al erg weinig energie verbruiken. Bovendien gaan slimme lampen heel erg lang mee (bij normaal gebruik meer dan 10 jaar), waardoor je minder vaak nieuwe lampen hoeft te kopen.
 
 ## Wat kun je er precies mee?
 
@@ -40,7 +45,9 @@ Om met Philips Hue te beginnen heb je sowieso een <a href="https://www.amazon.de
 
 Het Philips Hue systeem heeft een uiterst gebruiksvriendelijke smartphone app (voor iOS en Android), die je door het proces heen leidt.
 
-Eerst sluit je de Bridge met een netwerkkabel aan op je router. Die zit bij de meeste mensen in de meterkast en dat is ook een prima plek voor de Bridge. Daarna is het een kwestie van de Hue lampen in jouw eigen lampen draaien, zorgen dat de lampen aan staan (stroom hebben) en de lampen laten herkennen door de Hue Bridge. Vanaf dat moment kun je de lampen via je smartphone bedienen, scenes creeëren die overal bij passen en routines maken om bepaalde handelingen te automatiseren. Het is belangrijk dat je ouderwetse lichtschakelaars altijd op de "aan" stand staan zodat de Hue lampen altijd stroom hebben.
+Eerst sluit je de Bridge met een netwerkkabel aan op je router. Die zit bij de meeste mensen in de meterkast en dat is ook een prima plek voor de Bridge. Daarna is het een kwestie van de Hue lampen in jouw eigen lampen draaien, zorgen dat de lampen aan staan (stroom hebben) en de lampen laten herkennen door de Hue Bridge.
+
+Vanaf dat moment kun je de lampen via je smartphone bedienen, scenes creeëren die overal bij passen en routines maken om bepaalde handelingen te automatiseren. Het is belangrijk dat je ouderwetse lichtschakelaars altijd op de "aan" stand staan zodat de Hue lampen altijd stroom hebben.
 
 ## Conclusie
 

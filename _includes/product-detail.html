@@ -1,12 +1,51 @@
-<div class="l-wrapper">
+<div class="l-wrapper--medium">
   <div class="c-product-detail">
-    <div class="l-grid--2-cols">
-      <div>
+    <div class="l-grid--2-cols l-grid--1-cols@s u-mb">
+      <div class="c-product-detail__image">
         <img src="/assets/images/products/{{ page.image }}.jpg">
       </div>
       <div>
-        {{ page.title }}
+        <h1 class="c-heading --xxl u-mb">
+          {{ page.name }}
+        </h1>
+
+        {% if page.description %}
+          <div class="c-product-detail__description u-mb+">
+            <p>{{ page.description }}</p>
+          </div>
+        {% endif %}
+
+
+          <div class="l-grid--2-cols">
+            <div class="c-price u-mb">
+
+              <div class="c-price--old">
+                &euro; <span>{{ page.price-old }}</span>
+              </div>
+              <div class="c-price--new">
+                &euro; <span>{{ page.price-new }}</span>
+              </div>
+            </div>
+            <div class="c-product-detail__buy-button">
+              <a class="c-button --cta" href="{{ page.affiliate-link-amazon }}" rel="nofollow" target="_blank">Koop dit product bij Amazon</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="c-page__section">
+  <div class="l-wrapper">
+    {% include products-featured.html %}
+  </div>
+</div>
+
+<div class="c-page__section">
+  <div class="l-wrapper">
+    <h2 class="c-heading --xl u-mb">Lees ook</h2>
+
+    {% include blogs-overview-horizontal.html %}
   </div>
 </div>

@@ -1,0 +1,22 @@
+<div class="l-grid--4-cols l-grid--2-cols@s">
+  {% for product in site.products %}
+    <a class="c-product-card" href="{{ product.url | relative_url }}">
+      <div class="c-product-card__image">
+        <img src="/assets/images/products/{{ product.image }}.jpg">
+      </div>
+      <div class="c-product-card__title">
+        {{ product.name }}
+      </div>
+      <div class="c-price">
+        {% if product.price-new != product.price-old %}
+          <div class="c-price--old">
+            &euro; <span>{{ product.price-old }}</span>
+          </div>
+        {% endif %}
+        <div class="c-price--new">
+          &euro; <span>{{ product.price-new }}</span>
+        </div>
+      </div>
+    </a>
+  {% endfor %}
+</div>

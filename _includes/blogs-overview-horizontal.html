@@ -1,0 +1,12 @@
+<div class="l-grid--3-cols">
+  {% for post in site.posts %}
+    <a class="c-blog-card l-grid--2-cols l-grid--no-gap" href="{{ post.url | relative_url }}">
+      <div class="c-blog-card__image">
+        <img src="/assets/images/{{ post.image }}">
+      </div>
+      <div class="c-blog-card__title">
+        {{ post.title }}
+      </div>
+    </a>
+  {% endfor %}
+</div>
