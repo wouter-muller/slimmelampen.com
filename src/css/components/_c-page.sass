@@ -7,10 +7,13 @@
     padding: $site__section-padding 0
 
     &:nth-child(odd)
-      background-color: $grey-mid
+      background-color: $grey-light
 
     &:nth-child(even)
-      background-color: $grey-light
+      background-color: $grey-mid
+
+    &.\--white
+      background-color: $main-bg-color
 
   // Main and sidebar reusable grid
   +media-query(ml)

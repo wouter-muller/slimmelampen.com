@@ -9,27 +9,22 @@
 
     <div class="c-page__header-filler"></div>
 
-    <div class="l-wrapper">
-      <div class="c-page__main-and-side">
-        <main class="c-page__main">
-          <div class="c-blog-post">
+    <div class="l-wrapper--small">
+      <div class="u-mb++">
+        <main class="c-blog-post">
 
-            <div class="c-blog-post__image u-mb">
-              <img src="/assets/images/{{ page.image }}">
-            </div>
+          <div class="c-blog-post__image u-mb">
+            <img src="/assets/images/{{ page.image }}">
+          </div>
 
-            <div class="c-blog-post__title">
-              <h1 class="c-heading --xl u-mb">{{ page.title }}</h1>
-            </div>
+          <div class="c-blog-post__title">
+            <h1 class="c-heading --xl u-mb">{{ page.title }}</h1>
+          </div>
 
-            <div class="c-blog-post__content u-mb">
-              {{ content }}
-            </div>
+          <div class="c-blog-post__content u-mb">
+            {{ content }}
           </div>
         </main>
-        <aside class="c-page__side">
-          {% include blogs-overview-vertical.html %}
-        </aside>
       </div>
     </div>
 

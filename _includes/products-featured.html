@@ -1,4 +1,4 @@
-<div class="l-grid--4-cols l-grid--2-cols@s">
+<div class="l-grid--4-cols l-grid--2-cols@s u-mb">
   {% for product in site.products %}
     {% if product.featured %}
       <a class="c-product-card" href="{{ product.url | relative_url }}">
@@ -21,4 +21,7 @@
       </a>
     {% endif %}
   {% endfor %}
+</div>
+<div class="u-text-align--right">
+  <a href="/producten/" class="c-button --cta">Zie alle producten...</a>
 </div>
