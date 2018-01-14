@@ -1,37 +1,9 @@
 .c-logo
-  +box-shadow-border-radius
-  background-color: $blue
-  color: $inverted-text-color
-  display: inline-block
-  font-family: $site__logo-font-stack
-  font-size: px(30)
-  line-height: 0.75
-  margin-top: px(10)
-  padding: px(20) px(16) px(16)
+  img
+    +box-shadow-border-radius
+    margin-top: px(10)
 
-  &__lamp
-    float: left
-    margin-right: px(15)
-
-    img
-      height: px(50)
-
-  &__slimme,
-  &__lampen
-    font-weight: 700
-
-  &__slimme
-    letter-spacing: px(4.8)
-    margin-bottom: px(7)
-
-  &__lampen
-    letter-spacing: px(3)
-
-  &__com
-    font-size: 45%
-    font-weight: 400
-    letter-spacing: px(2)
-
-  &__line2
-    padding-left: px(45)
-    white-space: nowrap
+    +media-query(s)
+      height: px(70)
+    +media-query(ml)
+      height: px(88)
